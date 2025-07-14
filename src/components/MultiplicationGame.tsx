@@ -163,7 +163,7 @@ const MultiplicationGame: React.FC = () => {
   }, [gameStarted, startTime]);
 
   const currentQuestion = questions[currentQuestionIndex];
-  const progress = questions.length > 0 ? ((currentQuestionIndex + 1) / questions.length) * 100 : 0;
+  const progress = questions.length > 0 ? (gameStats.correctAnswers / questions.length) * 100 : 0;
 
   return (
     <div className="min-h-screen bg-gradient-game-bg flex items-center justify-center p-4">
